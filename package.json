@@ -10,6 +10,19 @@
     "type": "git",
     "url": "https://johanndutoit@github.com/Johanndutoit/GDG-Node-Broadcast-Chat-Server.git"
   },
+  "dependencies": {
+    "express": "*",
+    "jade": "*",
+    "coffee-script": "*",
+    "connect-assetmanager": "*",
+    "connect-redis": "*",
+    "connect-heroku-redis": "*",
+    "express-validator": "*",
+    "underscore": "*",
+    "node-uuid": "*",
+    "moment": "*",
+    "mongodb": ">= *"
+  },
   "keywords": [
     "chat",
     "google",
