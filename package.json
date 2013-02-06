@@ -1,0 +1,25 @@
+{
+  "name": "gdg-chat-server",
+  "version": "0.0.1",
+  "description": "Chat server for GDG",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://johanndutoit@github.com/Johanndutoit/GDG-Node-Broadcast-Chat-Server.git"
+  },
+  "keywords": [
+    "chat",
+    "google",
+    "developer",
+    "group",
+    "cape",
+    "town"
+  ],
+  "author": "Johann du Toit",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "9b01857c45ed439f8988c5023c41b9c06875cef4"
+}
