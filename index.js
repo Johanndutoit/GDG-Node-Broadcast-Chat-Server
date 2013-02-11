@@ -22,6 +22,33 @@ var server = net.createServer(function (socket) {
 	// Set a Default Name
 	socket.username = 'Guest #' + count_of_clients_that_have_connected
 
+	// Handle the Client disconnecting
+
+	// Function to Handle disconnect logic
+	var handle_client_disconnect = function(){
+
+		// Get the remove indexes
+		var idx = client_sockets.indexOf(socket);
+
+		// Remove the Client if index was found
+		if(idx != -1) client_sockets.splice(idx, 1);
+
+		// Loop all the connected clients and send the message.
+		// This will include the current socket too !
+		for(var i = 0; i < client_sockets.length; i++) {
+
+			// Write out !
+			client_sockets[i].write("Service: " + socket.username + " has disconnected!");
+
+		}
+
+	};
+
+	// This is when the client disconnected unexpectedly
+	socket.on('close', handle_client_disconnect);
+
+	// Handle the Client disconnecting
+
 	// Pipe response back to client
 	socket.on('data', function(data){
 
@@ -39,6 +66,7 @@ var server = net.createServer(function (socket) {
 			// This will include the current socket too !
 			for(var i = 0; i < client_sockets.length; i++) {
 
+				// Write out !
 				client_sockets[i].write(socket.username + ": " + data);
 
 			}
