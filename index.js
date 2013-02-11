@@ -38,7 +38,7 @@ var server = net.createServer(function (socket) {
 		for(var i = 0; i < client_sockets.length; i++) {
 
 			// Write out !
-			client_sockets[i].write("Service: " + socket.username + " has disconnected!");
+			client_sockets[i].write("Service: " + socket.username + " has disconnected!\r\n");
 
 		}
 
