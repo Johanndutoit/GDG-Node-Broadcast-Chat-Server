@@ -10,5 +10,11 @@ lib-cov
 pids
 logs
 results
+.DS_Store
+dump.rdb
 
+start.sh
+
+node_modules
+public/generated
 npm-debug.log
